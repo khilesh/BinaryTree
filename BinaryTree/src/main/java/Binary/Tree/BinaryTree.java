@@ -1,6 +1,8 @@
 package Binary.Tree;
 
 
+import Binary.Node;
+
 public class BinaryTree {
   Node root;
 
