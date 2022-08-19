@@ -16,7 +16,7 @@ BinarySearchTree() {root = null;}
 **/
 Node insert_Recursive(Node root, int key){
 	// Base case, empty root; in this case input key would be the root
-	if(root ==null){
+	if(root ==null){ /*** ALWAYS DO*******/
 		root = new Node(key);
 	return root ; }
 	

@@ -1,15 +1,17 @@
 package Binary.Tree;
 
-
 import Binary.Node;
 
 public class BinaryTree {
-  Node root;
+
+/*** ALWAYS DO --START *******/
+Node root;
 
 BinaryTree() {
 	root = null;
 }
 
+/*** ALWAYS DO --END *******/
 
 void  printInorder(Node node) {
 	if(node == null){ return;}
