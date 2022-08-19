@@ -51,6 +51,16 @@ void printPostorder(Node root){
 	System.out.println(" PostOrder Print ::" + root.key);
 }
 
+boolean isBST(Node root, int max, int min) {
+	
+	if (root == null) return false;
+	
+	return (root.key > min &&
+			root.key > max &&
+			isBST(root.left, min, root.key) &&
+			isBST(root.right, root.key, max));
+}
+
 /******* TO BE TESTED
 Node insert_Recursive_Improvised(Node root, int key){
 	
@@ -73,6 +83,7 @@ Node insert_Recursive_Improvised(Node root, int key){
     3. Preorder Traversal
     4. Postorder Traversal
     5. Delete
+    6. check if Binary tree is Binary Search tree or not.
  **/
 void insert(int key){ root = insert_Recursive(root, key);}
 void inOrder(){printInorder(root);}
@@ -80,7 +91,7 @@ void inOrder(){printInorder(root);}
 void preOrder() {printPreorder(root);}
 
 void postOrder() {printPostorder(root);}
-
+boolean isValidBST() {isBST(root, Integer.MAX_VALUE, Integer.MIN_VALUE);}
 public static void main (String[] args){
 	
 	System.out.println("Hello World");
@@ -97,6 +108,10 @@ public static void main (String[] args){
 	bst.inOrder();
 	bst.preOrder();
 	bst.postOrder();
+	
+	bst.isValidBST();
+	
+//	isValidBST();
 	
 }
 
