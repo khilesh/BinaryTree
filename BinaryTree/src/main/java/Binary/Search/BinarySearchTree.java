@@ -91,7 +91,9 @@ void inOrder(){printInorder(root);}
 void preOrder() {printPreorder(root);}
 
 void postOrder() {printPostorder(root);}
-boolean isValidBST() {isBST(root, Integer.MAX_VALUE, Integer.MIN_VALUE);}
+void isValidBST() {isBST(root, Integer.MAX_VALUE, Integer.MIN_VALUE);
+	
+}
 public static void main (String[] args){
 	
 	System.out.println("Hello World");
@@ -108,8 +110,8 @@ public static void main (String[] args){
 	bst.inOrder();
 	bst.preOrder();
 	bst.postOrder();
-	
 	bst.isValidBST();
+	
 	
 //	isValidBST();
 	
